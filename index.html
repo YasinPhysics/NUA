@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NUA - জাতীয় বিশ্ববিদ্যালয় শিক্ষার্থী উন্নয়ন সংস্থা</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Hind Siliguri', sans-serif;
+      line-height: 1.7;
+      color: #333;
+      background: #f8f9fa;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+    /* Hero Header */
+    header {
+      position: relative;
+      height: 90vh;
+      min-height: 600px;
+      background: linear-gradient(rgba(13, 71, 161, 0.75), rgba(0, 123, 255, 0.55)), 
+                  url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero-content h1 {
+      font-size: 4.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    .hero-content .tagline {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .hero-content p {
+      font-size: 1.35rem;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 16px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin: 10px;
+      transition: all 0.3s;
+    }
+    .btn-primary { background: #007bff; color: white; }
+    .btn-primary:hover { background: #0056b3; transform: translateY(-5px); }
+    .btn-secondary { background: transparent; color: white; border: 2px solid white; }
+    .btn-secondary:hover { background: white; color: #007bff; }
+
+    /* Vision & Mission Section */
+    .vision-mission {
+      background: white;
+      padding: 100px 0;
+    }
+    .vm-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+      gap: 50px;
+    }
+    .vm-card {
+      background: #f8f9fa;
+      padding: 50px 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .vm-card:hover { transform: translateY(-10px); }
+    .vm-card h2 {
+      font-size: 2.2rem;
+      color: #0d47a1;
+      margin-bottom: 20px;
+    }
+    .vm-card .icon {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+    }
+    .vm-card p {
+      font-size: 1.15rem;
+      color: #444;
+    }
+
+    /* Features */
+    section.features { padding: 80px 0; background: #f8f9fa; }
+    h3 { text-align: center; font-size: 2.8rem; margin-bottom: 60px; color: #0d47a1; }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: white;
+      padding: 35px 25px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    .card h4 {
+      color: #007bff;
+      margin: 20px 0 15px;
+      font-size: 1.6rem;
+    }
+
+    footer {
+      background: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    @media (max-width: 768px) {
+      header .hero-content h1 { font-size: 3rem; }
+      .vm-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Header -->
+  <header>
+    <div class="hero-content">
+      <h1>NUA</h1>
+      <div class="tagline">জাতীয় বিশ্ববিদ্যালয় শিক্ষার্থী উন্নয়ন সংস্থা</div>
+      <p>NU-র লাখ লাখ শিক্ষার্থীর পড়াশোনা, গবেষণা ও ক্যারিয়ারকে নতুন উচ্চতায় নিয়ে যাচ্ছি।</p>
+      <div>
+        <a href="https://forms.gle/তোমার-ফর্ম-লিঙ্ক" class="btn btn-primary" target="_blank">এখনই যুক্ত হোন</a>
+        <a href="#vision" class="btn btn-secondary">আমাদের লক্ষ্য দেখুন</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Vision & Mission Section -->
+  <section class="vision-mission" id="vision">
+    <div class="container">
+      <div class="vm-grid">
+        
+        <!-- Vision -->
+        <div class="vm-card">
+          <div class="icon">🌟</div>
+          <h2>আমাদের ভিশন (Vision)</h2>
+          <p>জাতীয় বিশ্ববিদ্যালয়ের প্রতিটি শিক্ষার্থীকে বিশ্বমানের শিক্ষা, দক্ষতা ও সুযোগ প্রদান করে একটি জ্ঞানভিত্তিক, সফল ও সমৃদ্ধ প্রজন্ম গড়ে তোলা।</p>
+        </div>
+
+        <!-- Mission -->
+        <div class="vm-card">
+          <div class="icon">🎯</div>
+          <h2>আমাদের মিশন (Mission)</h2>
+          <p>ফ্রি IELTS, GRE, BCS কোর্স প্রদান, গবেষণার সুবিধা তৈরি, সমাবর্তন অনুষ্ঠান আয়োজন এবং সফল শিক্ষার্থীদের গল্প ছড়িয়ে দিয়ে NU শিক্ষার্থীদের একাডেমিক ও ক্যারিয়ার উন্নয়নে সহায়তা করা।</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Activities -->
+  <section class="features">
+    <div class="container">
+      <h3>আমাদের কার্যক্রম</h3>
+      <div class="features-grid">
+        <div class="card">
+          <h4>ফ্রি কোর্স</h4>
+          <p>IELTS • GRE • BCS প্রস্তুতি – সম্পূর্ণ ফ্রি</p>
+        </div>
+        <div class="card">
+          <h4>গবেষণা সাপোর্ট</h4>
+          <p>মেন্টরশিপ ও রিসোর্স প্রদান</p>
+        </div>
+        <div class="card">
+          <h4>সমাবর্তন অনুষ্ঠান</h4>
+          <p>প্রতিবছর আয়োজন</p>
+        </div>
+        <div class="card">
+          <h4>পডকাস্ট ও সাকসেস স্টোরি</h4>
+          <p>সফল NU শিক্ষার্থীদের অনুপ্রেরণামূলক গল্প</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>© ২০২৬ NUA – জাতীয় বিশ্ববিদ্যালয় শিক্ষার্থী উন্নয়ন সংস্থা</strong></p>
+      <p>ফাউন্ডার: Muhammad | যোগাযোগ: nua.official@gmail.com</p>
+    </div>
+  </footer>
+
+</body>
+</html>
