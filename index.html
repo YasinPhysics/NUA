@@ -5,187 +5,179 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NUA - National University Association</title>
   
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/>
   
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
     body { font-family: 'Hind Siliguri', sans-serif; line-height: 1.7; color: #333; }
 
-    /* Navbar */
-    nav {
+    /* ====================== HEADER / NAVBAR ====================== */
+    header {
       position: fixed;
-      top: 0; width: 100%;
-      background: rgba(255,255,255,0.97);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.12);
       z-index: 1000;
-      padding: 12px 0;
+      padding: 15px 0;
     }
-    .nav-container {
-      max-width: 1300px; margin: 0 auto; padding: 0 25px;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .logo-container {
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 40px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      justify-content: space-between;
     }
-    .logo img { height: 65px; }
-    .full-name {
+
+    /* Left Side - Logo + Full Name */
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .logo-section img {
+      height: 72px;
+      width: auto;
+    }
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    .logo-text .nua {
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: #0d47a1;
+      line-height: 1;
+    }
+    .logo-text .full-name {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #1e40af;
+      margin-top: 4px;
+    }
+
+    /* Right Side - Menu */
+    .menu {
+      display: flex;
+      gap: 40px;
       font-size: 1.1rem;
       font-weight: 600;
-      color: #0d47a1;
-      line-height: 1.2;
     }
-
-    .nav-menu a {
-      margin-left: 35px;
+    .menu a {
       text-decoration: none;
       color: #1e3a8a;
-      font-weight: 600;
-      font-size: 1.08rem;
+      transition: color 0.3s;
+    }
+    .menu a:hover {
+      color: #007bff;
     }
 
-    /* Hero Section */
+    /* ====================== HERO ====================== */
     .hero {
       height: 100vh;
       min-height: 720px;
-      background: linear-gradient(rgba(13, 71, 161, 0.78), rgba(0, 123, 255, 0.65)), 
+      background: linear-gradient(rgba(13, 71, 161, 0.78), rgba(0, 123, 255, 0.65)),
                   url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCWpsX2eK1wNUKWb7jLxWYJKyr-Uq02Ou1F153FKrK2ivds3JINkNRotfeP48mZjiVDkkpSxABBhkaa-R8N3YsNZAGxLxpssLeaUO0RAxD1KFjwAIyj_WnOwXDYUKBRnj7Krslvlffvv8E/s1600/convocation+ceremony.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       color: white;
-      margin-top: 82px;
+      margin-top: 92px;
     }
     .hero-content h1 {
-      font-size: 3.9rem;
+      font-size: 4.2rem;
       font-weight: 700;
-      margin-bottom: 15px;
-      text-shadow: 0 5px 25px rgba(0,0,0,0.75);
+      margin-bottom: 12px;
+      text-shadow: 0 6px 30px rgba(0,0,0,0.75);
     }
     .hero-content .subtitle {
-      font-size: 1.65rem;
-      margin-bottom: 25px;
+      font-size: 1.8rem;
+      margin-bottom: 35px;
       font-weight: 500;
     }
     .highlight {
       background: #ffeb3b;
       color: #0d47a1;
-      padding: 22px 60px;
-      border-radius: 20px;
-      font-size: 1.52rem;
+      padding: 26px 70px;
+      border-radius: 25px;
+      font-size: 1.6rem;
       font-weight: 700;
-      margin: 30px auto 40px;
-      max-width: 920px;
-      box-shadow: 0 15px 45px rgba(0,0,0,0.35);
+      margin: 40px auto 50px;
+      max-width: 980px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
     }
-
     .btn-group {
       display: flex;
       justify-content: center;
-      gap: 25px;
+      gap: 28px;
       flex-wrap: wrap;
     }
     .btn {
-      padding: 18px 50px;
+      padding: 18px 55px;
       border-radius: 50px;
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       font-weight: 600;
       text-decoration: none;
       transition: all 0.4s;
     }
     .btn-primary { background: #007bff; color: white; }
-    .btn-primary:hover { background: #0056b3; transform: scale(1.08); }
+    .btn-primary:hover { background: #0056b3; transform: scale(1.07); }
     .btn-secondary { background: transparent; color: white; border: 3px solid white; }
     .btn-secondary:hover { background: white; color: #0d47a1; }
 
-    /* Vision & Mission */
-    .vision-mission {
-      padding: 120px 0;
-      background: linear-gradient(135deg, #f8fafd, #e0f0ff);
-    }
-    .vm-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
-      gap: 50px;
-      max-width: 1300px;
+    /* অন্যান্য সেকশন */
+    .vision-mission, .features { padding: 130px 0; }
+    .vm-grid, .features-grid {
+      max-width: 1350px;
       margin: 0 auto;
-      padding: 0 25px;
-    }
-    .vm-card {
-      background: white;
-      padding: 55px 45px;
-      border-radius: 22px;
-      box-shadow: 0 15px 45px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.4s;
-    }
-    .vm-card:hover { transform: translateY(-12px); }
-    .vm-card .icon { font-size: 4.8rem; margin-bottom: 25px; }
-    .vm-card h2 { font-size: 2.4rem; color: #0d47a1; margin-bottom: 20px; }
-
-    /* Features */
-    .features {
-      padding: 110px 0;
-      background: white;
-    }
-    .features h3 {
-      text-align: center;
-      font-size: 2.9rem;
-      margin-bottom: 70px;
-      color: #0d47a1;
-    }
-    .features-grid {
+      padding: 0 40px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 35px;
-      max-width: 1300px;
-      margin: 0 auto;
-      padding: 0 25px;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 45px;
     }
-    .card {
+    .vm-card, .feature-card {
       background: white;
-      padding: 45px 30px;
-      border-radius: 20px;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+      padding: 60px 45px;
+      border-radius: 24px;
+      box-shadow: 0 20px 55px rgba(0,0,0,0.08);
       text-align: center;
-      transition: all 0.4s;
     }
-    .card:hover {
-      transform: translateY(-15px);
-      box-shadow: 0 25px 55px rgba(0,0,0,0.15);
-    }
-    .card .icon { font-size: 4rem; margin-bottom: 22px; }
+    .vm-card:hover, .feature-card:hover { transform: translateY(-15px); }
+    .vm-card .icon, .feature-card .icon { font-size: 5rem; margin-bottom: 25px; }
 
     footer {
       background: #0d47a1;
       color: white;
       text-align: center;
-      padding: 65px 20px;
+      padding: 80px 20px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav>
-    <div class="nav-container">
-      <div class="logo-container">
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <!-- Left: Logo + Full Name -->
+      <div class="logo-section">
         <img src="https://i.postimg.cc/8zBs6Rp8/download.webp" alt="NUA Logo">
-        <div>
-          <strong style="font-size:1.35rem; color:#0d47a1;">NUA</strong><br>
-          <span class="full-name">National University Association</span>
-        </div>
+        <!-- <div class="logo-text">
+          <div class="nua">NUA</div>
+          <div class="full-name">National University Association</div>
+        </div> -->
       </div>
-      <div class="nav-menu">
+
+      <!-- Right: Menu -->
+      <div class="menu">
         <a href="#vision">ভিশন</a>
         <a href="#features">কার্যক্রম</a>
         <a href="#">সমবর্তন ২০২৭</a>
         <a href="#">যোগাযোগ</a>
       </div>
     </div>
-  </nav>
+  </header>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -216,7 +208,7 @@
       <div class="vm-card">
         <div class="icon">🎯</div>
         <h2>আমাদের মিশন</h2>
-        <p>ফ্রি কোর্স, গবেষণা সাপোর্ট এবং চীন মৈত্রী সম্মেলন ২০২৭-এর মাধ্যমে National University Association NU শিক্ষার্থীদের উন্নয়নে কাজ করা।</p>
+        <p>ফ্রি কোর্স, গবেষণা সাপোর্ট এবং চীন মৈত্রী সম্মেলন ২০২৭-এর মাধ্যমে শিক্ষার্থীদের উন্নয়নে কাজ করা।</p>
       </div>
     </div>
   </section>
@@ -225,35 +217,16 @@
   <section class="features" id="features">
     <h3>আমাদের কার্যক্রম</h3>
     <div class="features-grid">
-      <div class="card">
-        <div class="icon">📚</div>
-        <h4>ফ্রি কোর্স</h4>
-        <p>IELTS • GRE • BCS প্রস্তুতি</p>
-      </div>
-      <div class="card">
-        <div class="icon">🔬</div>
-        <h4>গবেষণা সাপোর্ট</h4>
-        <p>মেন্টরশিপ ও রিসোর্স</p>
-      </div>
-      <div class="card">
-        <div class="icon">🎓</div>
-        <h4>চীন মৈত্রী সম্মেলন ২০২৭</h4>
-        <p>বাংলাদেশের সবচেয়ে বড় সমবর্তন অনুষ্ঠান</p>
-      </div>
-      <div class="card">
-        <div class="icon">🎙️</div>
-        <h4>পডকাস্ট</h4>
-        <p>সফল শিক্ষার্থীদের গল্প</p>
-      </div>
+      <div class="feature-card"><div class="icon">📚</div><h4>ফ্রি কোর্স</h4><p>IELTS • GRE • BCS</p></div>
+      <div class="feature-card"><div class="icon">🔬</div><h4>গবেষণা সাপোর্ট</h4><p>মেন্টরশিপ ও রিসোর্স</p></div>
+      <div class="feature-card"><div class="icon">🎓</div><h4>চীন মৈত্রী সম্মেলন ২০২৭</h4><p>সবচেয়ে বড় সমবর্তন অনুষ্ঠান</p></div>
+      <div class="feature-card"><div class="icon">🎙️</div><h4>পডকাস্ট</h4><p>সফল শিক্ষার্থীদের গল্প</p></div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <div class="container">
-      <p><strong>© ২০২৬ National University Association (NUA)</strong></p>
-      <p>জাতীয় বিশ্ববিদ্যালয় শিক্ষার্থী উন্নয়ন সংস্থা | ফাউন্ডার: Muhammad</p>
-    </div>
+    <p><strong>© ২০২৬ National University Association (NUA)</strong></p>
+    <p>জাতীয় বিশ্ববিদ্যালয় শিক্ষার্থী উন্নয়ন সংস্থা</p>
   </footer>
 
 </body>
