@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NUA - জাতীয় বিশ্ববিদ্যালয় শিক্ষার্থী উন্নয়ন সংস্থা</title>
+  <title>NUA - National University Association</title>
   
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
   
@@ -16,8 +16,7 @@
       position: fixed;
       top: 0; width: 100%;
       background: rgba(255,255,255,0.97);
-      backdrop-filter: blur(12px);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
       z-index: 1000;
       padding: 12px 0;
     }
@@ -25,7 +24,18 @@
       max-width: 1300px; margin: 0 auto; padding: 0 25px;
       display: flex; align-items: center; justify-content: space-between;
     }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
     .logo img { height: 65px; }
+    .full-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #0d47a1;
+      line-height: 1.2;
+    }
 
     .nav-menu a {
       margin-left: 35px;
@@ -34,13 +44,12 @@
       font-weight: 600;
       font-size: 1.08rem;
     }
-    .nav-menu a:hover { color: #007bff; }
 
-    /* Hero Section - Beautiful Convocation Image */
+    /* Hero Section */
     .hero {
       height: 100vh;
       min-height: 720px;
-      background: linear-gradient(rgba(13, 71, 161, 0.75), rgba(0, 123, 255, 0.65)), 
+      background: linear-gradient(rgba(13, 71, 161, 0.78), rgba(0, 123, 255, 0.65)), 
                   url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCWpsX2eK1wNUKWb7jLxWYJKyr-Uq02Ou1F153FKrK2ivds3JINkNRotfeP48mZjiVDkkpSxABBhkaa-R8N3YsNZAGxLxpssLeaUO0RAxD1KFjwAIyj_WnOwXDYUKBRnj7Krslvlffvv8E/s1600/convocation+ceremony.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
@@ -50,30 +59,40 @@
       margin-top: 82px;
     }
     .hero-content h1 {
-      font-size: 4rem;
+      font-size: 3.9rem;
       font-weight: 700;
-      margin-bottom: 20px;
-      text-shadow: 0 5px 25px rgba(0,0,0,0.7);
+      margin-bottom: 15px;
+      text-shadow: 0 5px 25px rgba(0,0,0,0.75);
+    }
+    .hero-content .subtitle {
+      font-size: 1.65rem;
+      margin-bottom: 25px;
+      font-weight: 500;
     }
     .highlight {
       background: #ffeb3b;
       color: #0d47a1;
-      padding: 22px 55px;
-      border-radius: 18px;
-      font-size: 1.55rem;
+      padding: 22px 60px;
+      border-radius: 20px;
+      font-size: 1.52rem;
       font-weight: 700;
-      margin: 35px auto;
+      margin: 30px auto 40px;
       max-width: 920px;
-      box-shadow: 0 15px 45px rgba(0,0,0,0.4);
+      box-shadow: 0 15px 45px rgba(0,0,0,0.35);
     }
 
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
     .btn {
-      padding: 17px 48px;
+      padding: 18px 50px;
       border-radius: 50px;
-      font-size: 1.28rem;
+      font-size: 1.35rem;
       font-weight: 600;
       text-decoration: none;
-      margin: 12px;
       transition: all 0.4s;
     }
     .btn-primary { background: #007bff; color: white; }
@@ -81,7 +100,7 @@
     .btn-secondary { background: transparent; color: white; border: 3px solid white; }
     .btn-secondary:hover { background: white; color: #0d47a1; }
 
-    /* Vision & Mission - Separate Beautiful Cards */
+    /* Vision & Mission */
     .vision-mission {
       padding: 120px 0;
       background: linear-gradient(135deg, #f8fafd, #e0f0ff);
@@ -97,20 +116,16 @@
     .vm-card {
       background: white;
       padding: 55px 45px;
-      border-radius: 20px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+      border-radius: 22px;
+      box-shadow: 0 15px 45px rgba(0,0,0,0.1);
       text-align: center;
       transition: transform 0.4s;
     }
-    .vm-card:hover { transform: translateY(-15px); }
-    .vm-card h2 {
-      font-size: 2.4rem;
-      margin-bottom: 20px;
-      color: #0d47a1;
-    }
-    .vm-card .icon { font-size: 4.5rem; margin-bottom: 25px; }
+    .vm-card:hover { transform: translateY(-12px); }
+    .vm-card .icon { font-size: 4.8rem; margin-bottom: 25px; }
+    .vm-card h2 { font-size: 2.4rem; color: #0d47a1; margin-bottom: 20px; }
 
-    /* Our Activities - More Beautiful */
+    /* Features */
     .features {
       padding: 110px 0;
       background: white;
@@ -133,23 +148,15 @@
       background: white;
       padding: 45px 30px;
       border-radius: 20px;
-      box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
       text-align: center;
       transition: all 0.4s;
     }
     .card:hover {
-      transform: translateY(-12px);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+      transform: translateY(-15px);
+      box-shadow: 0 25px 55px rgba(0,0,0,0.15);
     }
-    .card .icon {
-      font-size: 3.8rem;
-      margin-bottom: 20px;
-    }
-    .card h4 {
-      font-size: 1.7rem;
-      color: #007bff;
-      margin-bottom: 15px;
-    }
+    .card .icon { font-size: 4rem; margin-bottom: 22px; }
 
     footer {
       background: #0d47a1;
@@ -164,9 +171,13 @@
   <!-- Navbar -->
   <nav>
     <div class="nav-container">
-      <a href="#" class="logo">
+      <div class="logo-container">
         <img src="https://i.postimg.cc/8zBs6Rp8/download.webp" alt="NUA Logo">
-      </a>
+        <div>
+          <strong style="font-size:1.35rem; color:#0d47a1;">NUA</strong><br>
+          <span class="full-name">National University Association</span>
+        </div>
+      </div>
       <div class="nav-menu">
         <a href="#vision">ভিশন</a>
         <a href="#features">কার্যক্রম</a>
@@ -179,61 +190,60 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h1>জাতীয় বিশ্ববিদ্যালয় শিক্ষার্থী উন্নয়ন সংস্থা</h1>
+      <h1>National University Association</h1>
+      <div class="subtitle">জাতীয় বিশ্ববিদ্যালয় শিক্ষার্থী উন্নয়ন সংস্থা</div>
       
       <div class="highlight">
         🇧🇩 চীন মৈত্রী সম্মেলন ২০২৭ 🇨🇳<br>
         বাংলাদেশের ভিতরে জাতীয় বিশ্ববিদ্যালয়ের সবচেয়ে বড় সমবর্তন অনুষ্ঠান
       </div>
 
-      <p>ফ্রি IELTS • GRE • BCS কোর্স • গবেষণা সাপোর্ট • পডকাস্ট • এবং ঐতিহাসিক সমবর্তন</p>
-      
-      <div>
+      <div class="btn-group">
         <a href="https://forms.gle/তোমার-ফর্ম-লিঙ্ক" class="btn btn-primary" target="_blank">এখনই যুক্ত হোন</a>
         <a href="#vision" class="btn btn-secondary">ভিশন ও মিশন দেখুন</a>
       </div>
     </div>
   </section>
 
-  <!-- Vision & Mission - Separate Cards -->
+  <!-- Vision & Mission -->
   <section class="vision-mission" id="vision">
     <div class="vm-grid">
       <div class="vm-card">
         <div class="icon">🌟</div>
         <h2>আমাদের ভিশন</h2>
-        <p>জাতীয় বিশ্ববিদ্যালয়ের প্রতিটি শিক্ষার্থীকে বিশ্বমানের শিক্ষা, দক্ষতা ও সুযোগ দিয়ে একটি আলোকিত ও সমৃদ্ধ প্রজন্ম গড়ে তোলা।</p>
+        <p>National University Association NU-র প্রতিটি শিক্ষার্থীকে বিশ্বমানের শিক্ষা ও সুযোগ দিয়ে একটি আলোকিত প্রজন্ম গড়ে তোলা।</p>
       </div>
       <div class="vm-card">
         <div class="icon">🎯</div>
         <h2>আমাদের মিশন</h2>
-        <p>ফ্রি কোর্স, গবেষণা সাপোর্ট, পডকাস্ট এবং চীন মৈত্রী সম্মেলন ২০২৭-এর মাধ্যমে NU শিক্ষার্থীদের একাডেমিক ও ক্যারিয়ার উন্নয়নে সহায়তা করা।</p>
+        <p>ফ্রি কোর্স, গবেষণা সাপোর্ট এবং চীন মৈত্রী সম্মেলন ২০২৭-এর মাধ্যমে National University Association NU শিক্ষার্থীদের উন্নয়নে কাজ করা।</p>
       </div>
     </div>
   </section>
 
-  <!-- Our Activities - Beautiful Design -->
+  <!-- Features -->
   <section class="features" id="features">
     <h3>আমাদের কার্যক্রম</h3>
     <div class="features-grid">
       <div class="card">
         <div class="icon">📚</div>
         <h4>ফ্রি কোর্স</h4>
-        <p>IELTS • GRE • BCS প্রস্তুতি – সম্পূর্ণ ফ্রি ক্লাস, মক টেস্ট ও গাইডেন্স</p>
+        <p>IELTS • GRE • BCS প্রস্তুতি</p>
       </div>
       <div class="card">
         <div class="icon">🔬</div>
         <h4>গবেষণা সাপোর্ট</h4>
-        <p>মেন্টরশিপ, রিসোর্স ও ছোট গ্রান্ট প্রদান</p>
+        <p>মেন্টরশিপ ও রিসোর্স</p>
       </div>
       <div class="card">
         <div class="icon">🎓</div>
         <h4>চীন মৈত্রী সম্মেলন ২০২৭</h4>
-        <p>বাংলাদেশের ভিতরে জাতীয় বিশ্ববিদ্যালয়ের সবচেয়ে বড় সমবর্তন অনুষ্ঠান</p>
+        <p>বাংলাদেশের সবচেয়ে বড় সমবর্তন অনুষ্ঠান</p>
       </div>
       <div class="card">
         <div class="icon">🎙️</div>
-        <h4>পডকাস্ট ও সাকসেস স্টোরি</h4>
-        <p>সফল NU শিক্ষার্থীদের অনুপ্রেরণামূলক গল্প</p>
+        <h4>পডকাস্ট</h4>
+        <p>সফল শিক্ষার্থীদের গল্প</p>
       </div>
     </div>
   </section>
@@ -241,8 +251,8 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p><strong>© ২০২৬ NUA – জাতীয় বিশ্ববিদ্যালয় শিক্ষার্থী উন্নয়ন সংস্থা</strong></p>
-      <p>ফাউন্ডার: Muhammad</p>
+      <p><strong>© ২০২৬ National University Association (NUA)</strong></p>
+      <p>জাতীয় বিশ্ববিদ্যালয় শিক্ষার্থী উন্নয়ন সংস্থা | ফাউন্ডার: Muhammad</p>
     </div>
   </footer>
 
