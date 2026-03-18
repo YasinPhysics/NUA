@@ -9,157 +9,104 @@
   
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-      font-family: 'Hind Siliguri', sans-serif;
-      line-height: 1.7;
-      color: #333;
-    }
+    body { font-family: 'Hind Siliguri', sans-serif; line-height: 1.7; color: #333; }
 
-    /* Fixed Navbar / Header */
+    /* Fixed Navbar */
     nav {
       position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.95);
+      top: 0; width: 100%;
+      background: rgba(255,255,255,0.97);
       backdrop-filter: blur(10px);
       box-shadow: 0 2px 15px rgba(0,0,0,0.1);
       z-index: 1000;
-      padding: 15px 0;
+      padding: 12px 0;
     }
     .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      max-width: 1200px; margin: 0 auto; padding: 0 20px;
+      display: flex; align-items: center; justify-content: space-between;
     }
-    .logo {
-      display: flex;
-      align-items: center;
+    .logo-container {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .logo-container img {
+      height: 58px;
+      width: auto;
+    }
+    .logo-text {
+      font-size: 1.95rem;
       font-weight: 700;
-      font-size: 1.8rem;
       color: #0d47a1;
-      text-decoration: none;
-    }
-    .logo img {
-      height: 50px;
-      margin-right: 12px;
     }
     .nav-menu a {
-      margin-left: 30px;
+      margin-left: 32px;
       text-decoration: none;
       color: #333;
       font-weight: 600;
-      transition: color 0.3s;
     }
     .nav-menu a:hover { color: #007bff; }
 
-    /* Hero Section with Beautiful Education Image */
+    /* Hero Section */
     .hero {
       height: 100vh;
-      min-height: 650px;
-      background: linear-gradient(rgba(13, 71, 161, 0.65), rgba(0, 123, 255, 0.55)), 
+      min-height: 680px;
+      background: linear-gradient(rgba(13, 71, 161, 0.75), rgba(0, 123, 255, 0.6)), 
                   url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      margin-top: 80px; /* Navbar-এর জন্য স্পেস */
+      display: flex; align-items: center; justify-content: center; 
+      text-align: center; color: white;
+      margin-top: 82px;
     }
     .hero-content h1 {
-      font-size: 4.5rem;
-      font-weight: 700;
-      margin-bottom: 15px;
-      text-shadow: 3px 3px 15px rgba(0,0,0,0.6);
+      font-size: 4.3rem; font-weight: 700; margin-bottom: 12px;
+      text-shadow: 3px 3px 15px rgba(0,0,0,0.7);
     }
     .hero-content .tagline {
-      font-size: 2rem;
-      margin-bottom: 25px;
-      font-weight: 600;
+      font-size: 2.15rem; margin-bottom: 20px; font-weight: 600;
     }
-    .hero-content p {
-      font-size: 1.35rem;
-      max-width: 850px;
-      margin: 0 auto 40px;
+    .highlight-box {
+      background: rgba(255, 215, 0, 0.95);
+      color: #0d47a1;
+      padding: 18px 40px;
+      border-radius: 12px;
+      font-size: 1.38rem;
+      font-weight: 700;
+      margin: 25px auto;
+      max-width: 820px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
     .btn {
-      padding: 16px 40px;
-      border-radius: 50px;
-      font-size: 1.2rem;
-      font-weight: 600;
-      text-decoration: none;
-      margin: 10px;
-      transition: all 0.3s;
+      padding: 16px 42px; border-radius: 50px; font-size: 1.25rem; font-weight: 600;
+      text-decoration: none; margin: 10px; transition: all 0.3s;
     }
     .btn-primary { background: #007bff; color: white; }
     .btn-primary:hover { background: #0056b3; transform: scale(1.05); }
-    .btn-secondary { background: transparent; color: white; border: 2px solid white; }
+    .btn-secondary { background: transparent; color: white; border: 2.5px solid white; }
     .btn-secondary:hover { background: white; color: #0d47a1; }
 
-    /* Vision & Mission */
-    .vision-mission { padding: 100px 0; background: white; }
-    .vm-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-      gap: 50px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
+    .vision-mission, .features { padding: 100px 0; }
+    .vm-grid, .features-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 40px;
+      max-width: 1200px; margin: 0 auto; padding: 0 20px;
     }
-    .vm-card {
-      background: #f8f9fa;
-      padding: 50px 40px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      text-align: center;
+    .vm-card, .card {
+      background: white; padding: 45px 35px; border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08); text-align: center;
     }
-    .vm-card h2 { font-size: 2.3rem; color: #0d47a1; margin-bottom: 20px; }
-
-    /* Features */
-    .features { padding: 90px 0; background: #f8f9fa; }
-    h3 { text-align: center; font-size: 2.8rem; margin-bottom: 60px; color: #0d47a1; }
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    .card {
-      background: white;
-      padding: 35px 25px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    }
-    .card h4 { color: #007bff; margin: 20px 0 15px; font-size: 1.65rem; }
-
-    footer {
-      background: #0d47a1;
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
-    }
+    footer { background: #0d47a1; color: white; text-align: center; padding: 50px 20px; }
   </style>
 </head>
 <body>
 
-  <!-- Fixed Header / Navbar with Logo -->
+  <!-- Navbar with Your Logo -->
   <nav>
     <div class="nav-container">
-      <a href="#" class="logo">
-        <!-- এখানে তোমার লোগো বসবে -->
-        <img src="https://via.placeholder.com/50x50/0d47a1/ffffff?text=NUA" alt="NUA Logo">
-        NUA
-      </a>
+      <div class="logo-container">
+        <img src="https://i.ibb.co.com/XnQsf/download.webp" alt="NUA Logo">
+        <span class="logo-text">NUA</span>
+      </div>
       <div class="nav-menu">
-        <a href="#vision">ভিশন ও মিশন</a>
+        <a href="#vision">ভিশন</a>
         <a href="#features">কার্যক্রম</a>
-        <a href="#">কোর্স</a>
-        <a href="#">পডকাস্ট</a>
+        <a href="#">সমবর্তন ২০২৭</a>
         <a href="#">যোগাযোগ</a>
       </div>
     </div>
@@ -168,12 +115,19 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h1>জাতীয় বিশ্ববিদ্যালয় শিক্ষার্থী উন্নয়ন সংস্থা</h1>
-      <div class="tagline">NUA</div>
-      <p>আমরা NU-র লাখ লাখ শিক্ষার্থীর পড়াশোনা, গবেষণা, ক্যারিয়ার ও সফলতাকে নতুন উচ্চতায় নিয়ে যাচ্ছি।</p>
+      <h1>NUA</h1>
+      <div class="tagline">জাতীয় বিশ্ববিদ্যালয় শিক্ষার্থী উন্নয়ন সংস্থা</div>
+      
+      <div class="highlight-box">
+        🇧🇩 চীন মৈত্রী সম্মেলন ২০২৭ 🇨🇳<br>
+        <strong>বাংলাদেশের ভিতরে জাতীয় বিশ্ববিদ্যালয়ের সবচেয়ে বড় সমবর্তন অনুষ্ঠান</strong>
+      </div>
+
+      <p>আমরা NU-র লাখ লাখ শিক্ষার্থীর জন্য ফ্রি কোর্স, গবেষণা সাপোর্ট এবং ঐতিহাসিক সমবর্তন আয়োজন করছি।</p>
+      
       <div>
         <a href="https://forms.gle/তোমার-ফর্ম-লিঙ্ক" class="btn btn-primary" target="_blank">এখনই যুক্ত হোন</a>
-        <a href="#vision" class="btn btn-secondary">আমাদের লক্ষ্য দেখুন</a>
+        <a href="#vision" class="btn btn-secondary">ভিশন ও মিশন দেখুন</a>
       </div>
     </div>
   </section>
@@ -187,7 +141,7 @@
       </div>
       <div class="vm-card">
         <h2>🎯 আমাদের মিশন</h2>
-        <p>ফ্রি IELTS, GRE, BCS কোর্স, গবেষণা সাপোর্ট, সমাবর্তন ও সফলতার গল্পের মাধ্যমে শিক্ষার্থীদের পাশে থাকা।</p>
+        <p>ফ্রি IELTS, GRE, BCS কোর্স, গবেষণা সাপোর্ট এবং চীন মৈত্রী সম্মেলন ২০২৭-এর মাধ্যমে NU শিক্ষার্থীদের উন্নয়ন করা।</p>
       </div>
     </div>
   </section>
@@ -199,8 +153,8 @@
       <div class="features-grid">
         <div class="card"><h4>ফ্রি কোর্স</h4><p>IELTS • GRE • BCS</p></div>
         <div class="card"><h4>গবেষণা সাপোর্ট</h4><p>মেন্টরশিপ ও রিসোর্স</p></div>
-        <div class="card"><h4>সমাবর্তন অনুষ্ঠান</h4><p>প্রতিবছর আয়োজন</p></div>
-        <div class="card"><h4>পডকাস্ট</h4><p>সফল শিক্ষার্থীদের গল্প</p></div>
+        <div class="card"><h4>চীন মৈত্রী সম্মেলন ২০২৭</h4><p>বাংলাদেশের সবচেয়ে বড় সমবর্তন</p></div>
+        <div class="card"><h4>পডকাস্ট</h4><p>সফলতার অনুপ্রেরণামূলক গল্প</p></div>
       </div>
     </div>
   </section>
