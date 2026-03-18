@@ -17,57 +17,59 @@
     }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-    /* Hero Header */
+    /* Beautiful Header Section */
     header {
       position: relative;
-      height: 90vh;
-      min-height: 600px;
-      background: linear-gradient(rgba(13, 71, 161, 0.75), rgba(0, 123, 255, 0.55)), 
-                  url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+      height: 100vh;
+      min-height: 650px;
+      background: linear-gradient(rgba(13, 71, 161, 0.65), rgba(0, 123, 255, 0.5)), 
+                  url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat fixed; /* এখানে ছবি চেঞ্জ করবে */
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
     }
-    .hero-content h1 {
-      font-size: 4.5rem;
+    .hero-content {
+      max-width: 900px;
+      padding: 20px;
+    }
+    header h1 {
+      font-size: 4.8rem;
       font-weight: 700;
       margin-bottom: 15px;
+      text-shadow: 3px 3px 12px rgba(0,0,0,0.6);
     }
-    .hero-content .tagline {
-      font-size: 1.8rem;
+    header .tagline {
+      font-size: 2rem;
       margin-bottom: 20px;
       font-weight: 600;
     }
-    .hero-content p {
-      font-size: 1.35rem;
+    header p {
+      font-size: 1.4rem;
       max-width: 800px;
       margin: 0 auto 40px;
     }
     .btn {
       display: inline-block;
-      padding: 16px 40px;
+      padding: 16px 42px;
       border-radius: 50px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       margin: 10px;
-      transition: all 0.3s;
+      transition: all 0.4s;
     }
     .btn-primary { background: #007bff; color: white; }
-    .btn-primary:hover { background: #0056b3; transform: translateY(-5px); }
-    .btn-secondary { background: transparent; color: white; border: 2px solid white; }
-    .btn-secondary:hover { background: white; color: #007bff; }
+    .btn-primary:hover { background: #0056b3; transform: scale(1.05); }
+    .btn-secondary { background: transparent; color: white; border: 2.5px solid white; }
+    .btn-secondary:hover { background: white; color: #0d47a1; }
 
-    /* Vision & Mission Section */
-    .vision-mission {
-      background: white;
-      padding: 100px 0;
-    }
+    /* Vision & Mission */
+    .vision-mission { padding: 100px 0; background: white; }
     .vm-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
       gap: 50px;
     }
     .vm-card {
@@ -76,25 +78,12 @@
       border-radius: 16px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.08);
       text-align: center;
-      transition: transform 0.3s;
     }
-    .vm-card:hover { transform: translateY(-10px); }
-    .vm-card h2 {
-      font-size: 2.2rem;
-      color: #0d47a1;
-      margin-bottom: 20px;
-    }
-    .vm-card .icon {
-      font-size: 3.5rem;
-      margin-bottom: 20px;
-    }
-    .vm-card p {
-      font-size: 1.15rem;
-      color: #444;
-    }
+    .vm-card h2 { font-size: 2.3rem; color: #0d47a1; margin-bottom: 20px; }
+    .vm-card p { font-size: 1.18rem; color: #444; }
 
     /* Features */
-    section.features { padding: 80px 0; background: #f8f9fa; }
+    .features { padding: 80px 0; background: #f8f9fa; }
     h3 { text-align: center; font-size: 2.8rem; margin-bottom: 60px; color: #0d47a1; }
     .features-grid {
       display: grid;
@@ -108,11 +97,7 @@
       text-align: center;
       box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     }
-    .card h4 {
-      color: #007bff;
-      margin: 20px 0 15px;
-      font-size: 1.6rem;
-    }
+    .card h4 { color: #007bff; margin: 20px 0 15px; font-size: 1.65rem; }
 
     footer {
       background: #0d47a1;
@@ -122,70 +107,51 @@
     }
 
     @media (max-width: 768px) {
-      header .hero-content h1 { font-size: 3rem; }
-      .vm-grid { grid-template-columns: 1fr; }
+      header h1 { font-size: 3.2rem; }
+      header .tagline { font-size: 1.6rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Hero Header -->
+  <!-- Header Section with Beautiful Education Image -->
   <header>
     <div class="hero-content">
       <h1>NUA</h1>
       <div class="tagline">জাতীয় বিশ্ববিদ্যালয় শিক্ষার্থী উন্নয়ন সংস্থা</div>
-      <p>NU-র লাখ লাখ শিক্ষার্থীর পড়াশোনা, গবেষণা ও ক্যারিয়ারকে নতুন উচ্চতায় নিয়ে যাচ্ছি।</p>
+      <p>NU-র প্রতিটি শিক্ষার্থীর জন্য উন্নত শিক্ষা, গবেষণা ও সফল ক্যারিয়ার গড়ে তোলার প্রতিশ্রুতি।</p>
       <div>
         <a href="https://forms.gle/তোমার-ফর্ম-লিঙ্ক" class="btn btn-primary" target="_blank">এখনই যুক্ত হোন</a>
-        <a href="#vision" class="btn btn-secondary">আমাদের লক্ষ্য দেখুন</a>
+        <a href="#vision" class="btn btn-secondary">ভিশন ও মিশন দেখুন</a>
       </div>
     </div>
   </header>
 
-  <!-- Vision & Mission Section -->
+  <!-- Vision & Mission -->
   <section class="vision-mission" id="vision">
     <div class="container">
       <div class="vm-grid">
-        
-        <!-- Vision -->
         <div class="vm-card">
-          <div class="icon">🌟</div>
-          <h2>আমাদের ভিশন (Vision)</h2>
-          <p>জাতীয় বিশ্ববিদ্যালয়ের প্রতিটি শিক্ষার্থীকে বিশ্বমানের শিক্ষা, দক্ষতা ও সুযোগ প্রদান করে একটি জ্ঞানভিত্তিক, সফল ও সমৃদ্ধ প্রজন্ম গড়ে তোলা।</p>
+          <h2>🌟 আমাদের ভিশন</h2>
+          <p>জাতীয় বিশ্ববিদ্যালয়ের প্রতিটি শিক্ষার্থীকে বিশ্বমানের দক্ষতা ও সুযোগ দিয়ে একটি আলোকিত, সফল ও সমৃদ্ধ প্রজন্ম তৈরি করা।</p>
         </div>
-
-        <!-- Mission -->
         <div class="vm-card">
-          <div class="icon">🎯</div>
-          <h2>আমাদের মিশন (Mission)</h2>
-          <p>ফ্রি IELTS, GRE, BCS কোর্স প্রদান, গবেষণার সুবিধা তৈরি, সমাবর্তন অনুষ্ঠান আয়োজন এবং সফল শিক্ষার্থীদের গল্প ছড়িয়ে দিয়ে NU শিক্ষার্থীদের একাডেমিক ও ক্যারিয়ার উন্নয়নে সহায়তা করা।</p>
+          <h2>🎯 আমাদের মিশন</h2>
+          <p>ফ্রি IELTS, GRE, BCS কোর্স, গবেষণা সাপোর্ট, সমাবর্তন অনুষ্ঠান এবং সফল শিক্ষার্থীদের গল্প ছড়িয়ে NU শিক্ষার্থীদের একাডেমিক ও ক্যারিয়ার উন্নয়নে সহায়তা করা।</p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- Our Activities -->
+  <!-- Features -->
   <section class="features">
     <div class="container">
       <h3>আমাদের কার্যক্রম</h3>
       <div class="features-grid">
-        <div class="card">
-          <h4>ফ্রি কোর্স</h4>
-          <p>IELTS • GRE • BCS প্রস্তুতি – সম্পূর্ণ ফ্রি</p>
-        </div>
-        <div class="card">
-          <h4>গবেষণা সাপোর্ট</h4>
-          <p>মেন্টরশিপ ও রিসোর্স প্রদান</p>
-        </div>
-        <div class="card">
-          <h4>সমাবর্তন অনুষ্ঠান</h4>
-          <p>প্রতিবছর আয়োজন</p>
-        </div>
-        <div class="card">
-          <h4>পডকাস্ট ও সাকসেস স্টোরি</h4>
-          <p>সফল NU শিক্ষার্থীদের অনুপ্রেরণামূলক গল্প</p>
-        </div>
+        <div class="card"><h4>ফ্রি কোর্স</h4><p>IELTS • GRE • BCS প্রস্তুতি</p></div>
+        <div class="card"><h4>গবেষণা সাপোর্ট</h4><p>মেন্টরশিপ ও রিসোর্স</p></div>
+        <div class="card"><h4>সমাবর্তন</h4><p>প্রতিবছর আয়োজন</p></div>
+        <div class="card"><h4>পডকাস্ট</h4><p>সফলতার অনুপ্রেরণামূলক গল্প</p></div>
       </div>
     </div>
   </section>
@@ -194,7 +160,7 @@
   <footer>
     <div class="container">
       <p><strong>© ২০২৬ NUA – জাতীয় বিশ্ববিদ্যালয় শিক্ষার্থী উন্নয়ন সংস্থা</strong></p>
-      <p>ফাউন্ডার: Muhammad | যোগাযোগ: nua.official@gmail.com</p>
+      <p>ফাউন্ডার: Muhammad</p>
     </div>
   </footer>
 
